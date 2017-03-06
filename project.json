@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        },
+        "Microsoft.AspNetCore.Server.Kestrel":"1.0.1"
+      },
+      "imports": "dnxcore50"
+    }
+  },
+  "tools": {
+    // Look at the webpage for the nuget package to find the latest version.
+    "Microsoft.DotNet.Watcher.Tools": "1.1.0-preview4-final"
+  }
+}
