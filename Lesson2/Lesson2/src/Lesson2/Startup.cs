@@ -27,12 +27,16 @@ namespace Lesson2
             {
                 app.UseDeveloperExceptionPage();
             }
+            if (env.IsProduction())
+            {
+                // put production specific code
+            }
 
-            app.UseFileServer();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World");
+                await context.Response.WriteAsync($"This is in {env.EnvironmentName}");
             });
 
         }
